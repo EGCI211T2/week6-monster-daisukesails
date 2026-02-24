@@ -2,20 +2,40 @@
 using namespace std;
 
 #include "monster.h"
+#include "thanos.h"
 
-int main(int argc, char* argv[]) {
+int main() {
+    Thanos T;
+    int n;
 
-    monster A;
-  /*
- 
- monster *p,x;
-  p=&x;
-  p=new monster;
- delete p;
+    cout << "How many monsters? ";
+    cin >> n;
 
- p=new monster[3];
- delete []p;
+    monster *m = new monster[n];
 
-*/
+  int main(int argc, char* argv[]) {
 
+    monster A("Siri",10,1);
+    monster B("Daisuke");
+    monster C[5] = {monster("James"), monster("Liam"), monster("Noah"), monster("William"), monster("Benjamin")};
+
+    ++T;
+    ++T;
+    T.snap_finger(m, n);
+
+    ++T;
+    ++T;
+    T.snap_finger(m, n);
+
+    ++T;
+    ++T;
+    T.snap_finger(m, n);
+
+    cout << "\n--- Survivors ---" << endl;
+    for (int i = 0; i < n; i++) {
+        m[i].display(); 
+    }
+
+    delete[] m;
+    return 0;
 }
